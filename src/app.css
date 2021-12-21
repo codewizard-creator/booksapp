@@ -1,0 +1,16 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.app {
+    text-align: center;
+    background-image: url(./library-photo.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.width {
+    max-width: 40rem;
+}
+
