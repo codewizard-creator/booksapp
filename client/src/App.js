@@ -55,7 +55,7 @@ function App() {
     if(category === "author") {
       const options = {
         method: 'GET',
-        url: `http://localhost:8000/authors?author=${convertstring(input).toUpperCase()}}`
+        url: `http://localhost:${process.env.PORT || 8000}/authors?author=${convertstring(input).toUpperCase()}}`
     }
 
     axios(options).then((response) => {
@@ -70,7 +70,7 @@ function App() {
 
   if(category === "title") {
 
-  fetch(`http://localhost:8000/titles?title=${convertstring(input).toUpperCase()}`).then((res) => res.json()).then(data => {
+  fetch(`http://localhost:${process.env.PORT || 8000}/titles?title=${convertstring(input).toUpperCase()}`).then((res) => res.json()).then(data => {
     
     setResdata(Array.isArray(data.items) ? data : {
       items: []
