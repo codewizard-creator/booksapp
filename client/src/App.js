@@ -51,6 +51,12 @@ function App() {
     setExplainmode(false);
   }
 
+  const handleKeyDown = (e) => {
+    if(e.key === "Enter")
+     onButtonClick();
+
+  }
+
   const onButtonClick = () => {
     if(category === "author") {
       const options = {
@@ -109,11 +115,13 @@ function App() {
       { explainmode === false ?
       <ErrorBoundary>
     <div className=" width br2 dark-gray b--black-100 w-100 w-50-m w-50-l center pb5">
-      <h1 className='tc black fw4 f3'>Welcome to Googlebooks Search App </h1>
-      <Searchfield onButtonClick={onButtonClick} onInputChange={onInputChange} onSelectChange={onSelectChange} />
+      <h1 className='mt0 tc black fw4 f3'>Welcome to Googlebooks Search App </h1>
+      <Searchfield handleKeyDown={handleKeyDown} onButtonClick={onButtonClick} onInputChange={onInputChange} onSelectChange={onSelectChange} />
       <Booklist onItemClick={onItemClick} resdata = {resdata} />
     </div>
-    </ErrorBoundary> : <Details previewLink={previewLink} category={kind} title={title} page={page} explainmodeoff={explainmodeoff} description={description} subtitle={subtitle} />
+    </ErrorBoundary> :<><h1 className='mt0 tc black fw4 f3'>Welcome to Googlebooks Search App </h1> <Details previewLink={previewLink} category={kind} title={title} page={page} explainmodeoff={explainmodeoff} description={description} subtitle={subtitle} 
+    />
+    </>
 }
     </div>
   );
