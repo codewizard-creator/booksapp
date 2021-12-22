@@ -55,7 +55,7 @@ function App() {
     if(category === "author") {
       const options = {
         method: 'GET',
-        url: `https://safe-meadow-28955.herokuapp.com/authors?author=${convertstring(input).toUpperCase()}}`
+        url: `https://safe-meadow-28955.herokuapp.com/authors?author=${convertstring(input).toUpperCase()}`
     }
 
     axios(options).then((response) => {
