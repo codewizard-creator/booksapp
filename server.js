@@ -33,7 +33,8 @@ app.get('/titles', (req, res) => {
      }).catch(err => res.status(404).json(err));
 
 })
-
+/*
+****FOR PRODUCTION****
 if(process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
 
@@ -41,7 +42,7 @@ if(process.env.NODE_ENV === "production") {
         res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
     });
 }
-
+*/
 const PORT = process.env.PORT || 8000;
 
 app.listen(PORT, () => 

@@ -61,13 +61,14 @@ function App() {
     if(category === "author") {
       const options = {
         method: 'GET',
-        url: `https://safe-meadow-28955.herokuapp.com/authors?author=${convertstring(input).toUpperCase()}`
+        url: `http://localhost:8000/authors?author=${convertstring(input).toUpperCase()}`
     }
 
     axios(options).then((response) => {
       setResdata(Array.isArray(response.data.items) ? response.data : {
         items: []
       });
+
 
     }).catch((error) => {
         console.error(error);
@@ -76,7 +77,7 @@ function App() {
 
   if(category === "title") {
 
-  fetch(`https://safe-meadow-28955.herokuapp.com/titles?title=${convertstring(input).toUpperCase()}`).then((res) => res.json()).then(data => {
+  fetch(`http://localhost:8000/titles?title=${convertstring(input).toUpperCase()}`).then((res) => res.json()).then(data => {
     
     setResdata(Array.isArray(data.items) ? data : {
       items: []
