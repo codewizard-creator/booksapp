@@ -9,10 +9,12 @@ export const Details = ({previewLink ,category, page, title, subtitle, descripti
             
             <h1 className="fw6 f3 f2-ns lh-title mt0 mb3">{title}</h1>
             <h2 className='"fw2 f4 lh-copy mt0 mb3"'>{subtitle}</h2>
-            <p className="fw1 f5 mt0 mb3">
+
+            <div className='scrollbar'>
+            <p className="desc fw1 f5 mt0 mb3">
             {description}
             </p>
-            
+            </div>
             <div className='flex mb4'><p className='mr6'>Page: {page}</p>
             <p>{category}</p>
             </div>

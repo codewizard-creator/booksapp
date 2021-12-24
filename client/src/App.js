@@ -120,7 +120,7 @@ function App() {
       <Searchfield handleKeyDown={handleKeyDown} onButtonClick={onButtonClick} onInputChange={onInputChange} onSelectChange={onSelectChange} />
       <Booklist onItemClick={onItemClick} resdata = {resdata} />
     </div>
-    </ErrorBoundary> :<><h1 className='mt0 tc black fw4 f3'>Welcome to Googlebooks Search App </h1> <Details previewLink={previewLink} category={kind} title={title} page={page} explainmodeoff={explainmodeoff} description={description} subtitle={subtitle} 
+    </ErrorBoundary> :<><Details previewLink={previewLink} category={kind} title={title} page={page} explainmodeoff={explainmodeoff} description={description} subtitle={subtitle} 
     />
     </>
 }

@@ -2,16 +2,10 @@ import '../../tachyons.css';
 import './Bookitems.css';
 import React, { Component } from 'react';
 
-
-
-
-
 export class Bookitems extends Component  {
   constructor(props) {
     super(props);
   }
-
-
 
  componentDidMount ()  {
     if(this.props.author=== "") {
@@ -22,7 +16,7 @@ export class Bookitems extends Component  {
       document.getElementById(this.props.index).textContent = data.items[1].volumeInfo.authors[0];
       else if(Array.isArray(data.items) && Array.isArray(data.items[2].volumeInfo.authors)) {
       document.getElementById(this.props.index).textContent = data.items[2].volumeInfo.authors[0];
-    } else document.getElementById(this.props.index).textContent = " ";
+    } else document.getElementById(this.props.index).textContent = "";
     }
     )
     
